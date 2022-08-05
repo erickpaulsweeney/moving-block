@@ -7,8 +7,8 @@ const Box = styled.div`
     width: 5em;
     border-radius: 10px;
     position: absolute;
-    top: ${props => props.yVal}em;
-    left: ${props => props.xVal}em;
+    top: ${props => props.yVal}px;
+    left: ${props => props.xVal}px;
     transform: rotate(${props => props.rVal}deg);
     border: 1px solid black;
 `
@@ -25,12 +25,12 @@ export default function Main() {
             </div>
             <div className="container-controls">
                 <div className="container-x">
-                    <p>X ({xVal * 16}px)</p>
-                    <input type="range" min={0} max={16} value={xVal} onChange={(ev) => setXVal(ev.target.value)} />
+                    <p>X ({xVal}px)</p>
+                    <input type="range" min={0} max={256} value={xVal} onChange={(ev) => setXVal(ev.target.value)} />
                 </div>
                 <div className="container-y">
-                    <p>Y ({yVal * 16}px)</p>
-                    <input type="range" min={0} max={16} value={yVal} onChange={(ev) => setYVal(ev.target.value)} />
+                    <p>Y ({yVal}px)</p>
+                    <input type="range" min={0} max={256} value={yVal} onChange={(ev) => setYVal(ev.target.value)} />
                 </div>
                 <div className="container-rotate">
                     <p>Rotate ({rVal}deg)</p>
