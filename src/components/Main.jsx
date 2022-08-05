@@ -34,7 +34,7 @@ export default function Main() {
                 </div>
                 <div className="container-rotate">
                     <p>Rotate ({rVal}deg)</p>
-                    <input type="range" min={0} max={360} value={rVal} onChange={(ev) => setRVal(ev.target.value)} />
+                    <input type="range" min={-180} max={180} value={rVal} onChange={(ev) => setRVal(ev.target.value)} />
                 </div>
             </div>
         </div>
